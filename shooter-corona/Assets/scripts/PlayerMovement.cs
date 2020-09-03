@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     //test
-    public float moveSpeed = 5f;
+    public float moveSpeed = 8f;
 
     public Rigidbody rigBody;
 
@@ -23,6 +23,6 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         /// Movement 
-        rigBody.MovePosition(rigBody.position + movement * moveSpeed * Time.deltaTime);
+        rigBody.MovePosition(rigBody.position + movement.normalized * moveSpeed * Time.deltaTime);
     }
 }
