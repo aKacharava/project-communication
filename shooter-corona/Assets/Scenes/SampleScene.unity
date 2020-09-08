@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: ab2237850369746438caa4d9778272a7, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: f2d2e0491e1b46f4795a1d0b3ef251bd, type: 2}
 --- !u!1 &54283783
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,7 +970,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!154 &891575499
 TerrainCollider:
@@ -1121,7 +1121,7 @@ Transform:
   m_GameObject: {fileID: 895155851}
   m_LocalRotation: {x: -0, y: 0.7071069, z: -0, w: 0.70710677}
   m_LocalPosition: {x: -22.82, y: -5.130807, z: -36.47}
-  m_LocalScale: {x: 15.017543, y: 2.8288, z: 0.2295}
+  m_LocalScale: {x: 15.017543, y: 2.8288, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1148693257}
   m_RootOrder: 1
@@ -1332,8 +1332,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092904338}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.34, y: -5.130807, z: -36.15}
-  m_LocalScale: {x: 15.017543, y: 2.8288, z: 0.2295}
+  m_LocalPosition: {x: -15.21, y: -5.130807, z: -36.15}
+  m_LocalScale: {x: 15.017543, y: 2.8288, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1148693257}
   m_RootOrder: 0
@@ -1619,7 +1619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d823c488de5882d4b838bd5dc017030b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 7.02
   rigBody: {fileID: 1242826840}
 --- !u!114 &1242826843
 MonoBehaviour:
@@ -2139,7 +2139,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &1957017451
 Transform:
@@ -2149,8 +2149,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1957017450}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -5.19, z: -2.423}
-  m_LocalScale: {x: 4, y: 0.4, z: 0.61504}
+  m_LocalPosition: {x: -0, y: -5.19, z: 0.14}
+  m_LocalScale: {x: 4, y: 0.4, z: 5.7146506}
   m_Children: []
   m_Father: {fileID: 1369096064}
   m_RootOrder: 3
