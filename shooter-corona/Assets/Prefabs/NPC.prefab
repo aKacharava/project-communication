@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7817427691499189191}
   m_Layer: 0
   m_Name: NPC
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5e5ed2f52d63064e8dbadb211f80dff, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   lookRadius: 15
   infectRadius: 3
   wanderRadius: 10
@@ -106,7 +106,6 @@ MonoBehaviour:
   infectTimer: 0
   masked: 0
   currentColor: {r: 0, g: 0, b: 0, a: 0}
---- !u!1 &7817427692953408765
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

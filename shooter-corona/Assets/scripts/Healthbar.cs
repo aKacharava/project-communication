@@ -8,6 +8,8 @@ public class Healthbar : MonoBehaviour
     public Slider slider;
     public Gradient gradient;
     public Image fill;
+    public GameObject gameOverUI;
+    public GameObject gameUI;
 
     public void SetMaxHealth(float health)
     {
@@ -22,5 +24,15 @@ public class Healthbar : MonoBehaviour
     {
         slider.value = health;
         fill.color = gradient.Evaluate(slider.normalizedValue);
+    }
+
+    void Update()
+    {
+        if (slider.value == slider.maxValue)
+        {
+            gameUI.SetActive(false);
+            gameOverUI.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
 }
