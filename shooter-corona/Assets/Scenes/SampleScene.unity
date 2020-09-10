@@ -411,6 +411,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7817427691499189191, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
+      propertyPath: infectTimer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
 --- !u!4 &323145291 stripped
@@ -472,6 +476,10 @@ PrefabInstance:
     - target: {fileID: 7817427691499189180, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
       propertyPath: m_Name
       value: NPC (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817427691499189191, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
+      propertyPath: infectTimer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
@@ -831,6 +839,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7817427691499189191, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
+      propertyPath: infectTimer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
 --- !u!4 &591495019 stripped
@@ -973,6 +985,10 @@ PrefabInstance:
     - target: {fileID: 7817427691499189180, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
       propertyPath: m_Name
       value: NPC (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817427691499189191, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
+      propertyPath: infectTimer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
@@ -1748,6 +1764,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7817427691499189191, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
+      propertyPath: infectTimer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
 --- !u!4 &1238049986 stripped
@@ -1862,7 +1882,7 @@ MonoBehaviour:
   maxHealth: 100
   minHealth: 0
   currentHealth: 0
-  healthbarTestValue: 10
+  infectionRate: 1
   playerHealthbar: {fileID: 1609332928}
 --- !u!1 &1308542855
 GameObject:
@@ -2094,6 +2114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7817427691499189191, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
+      propertyPath: infectTimer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
 --- !u!4 &1376090863 stripped
@@ -2201,6 +2225,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7817427691499189191, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
+      propertyPath: infectTimer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
 --- !u!4 &1493232231 stripped
@@ -2285,6 +2313,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7817427691499189191, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
+      propertyPath: infectTimer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
 --- !u!4 &1622315720 stripped
@@ -2346,6 +2378,10 @@ PrefabInstance:
     - target: {fileID: 7817427691499189180, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
       propertyPath: m_Name
       value: NPC (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817427691499189191, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
+      propertyPath: infectTimer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
@@ -2414,6 +2450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7817427691499189191, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
+      propertyPath: infectTimer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
 --- !u!4 &1708432989 stripped
@@ -2475,6 +2515,10 @@ PrefabInstance:
     - target: {fileID: 7817427691499189180, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
       propertyPath: m_Name
       value: NPC (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817427691499189191, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
+      propertyPath: infectTimer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
@@ -2666,6 +2710,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7817427691499189191, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
+      propertyPath: infectTimer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
 --- !u!4 &2017164406 stripped
@@ -2727,6 +2775,10 @@ PrefabInstance:
     - target: {fileID: 7817427691499189180, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
       propertyPath: m_Name
       value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817427691499189191, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
+      propertyPath: infectTimer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c4a4ee209031324b91cdb7a09b81a6d, type: 3}
