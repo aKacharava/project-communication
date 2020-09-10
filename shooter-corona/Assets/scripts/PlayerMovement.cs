@@ -5,14 +5,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //test
     public float moveSpeed = 8f;
-
     public Rigidbody rigBody;
 
     Vector3 movement;
 
-    // Update is called once per frame
     void Update()
     {
         /// Input
