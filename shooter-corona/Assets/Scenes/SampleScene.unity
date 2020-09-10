@@ -3507,6 +3507,10 @@ PrefabInstance:
       propertyPath: playerHealthbar
       value: 
       objectReference: {fileID: 1609332928}
+    - target: {fileID: 4589583066419454292, guid: 1bff4443adb337544b5a4e87267ffb55, type: 3}
+      propertyPath: infectionRate
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4589583066419454302, guid: 1bff4443adb337544b5a4e87267ffb55, type: 3}
       propertyPath: m_Name
       value: Player
