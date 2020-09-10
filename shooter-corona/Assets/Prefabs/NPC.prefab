@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7817427691499189191}
   m_Layer: 0
   m_Name: NPC
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,8 +100,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 10
+  infectRadius: 3
   wanderRadius: 10
   wanderTimer: 1
+  infectTimer: 0
 --- !u!1 &7817427692953408765
 GameObject:
   m_ObjectHideFlags: 0
