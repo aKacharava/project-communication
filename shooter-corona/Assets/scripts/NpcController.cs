@@ -1,44 +1,50 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class NpcController : MonoBehaviour
 {
-    
+    //Variables
+
     public float lookRadius = 10f;
+    public float infectRadius = 3f;
     public float wanderRadius;
     public float wanderTimer;
+    public float infectTimer;
 
     private float timer;
     private bool attacking;
-    private Transform target;
+    private Transform targetTransform;
     private NavMeshAgent agent;
+    private PlayerHealth targetHealth;
+     
 
-    // Start is called before the first frame update
+    //Methods
+
     void Start()
     {
-        target = PlayerManager.instance.player.transform;
+        targetHealth = PlayerManager.instance.player.GetComponent<PlayerHealth>();
+        targetTransform = PlayerManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
         timer = wanderTimer;
         attacking = false;
     }
-
-    
-    // Update is called once per frame
+        
     void Update()
     {
         timer += Time.deltaTime;
-        float distance = Vector3.Distance(target.position, transform.position);
+        float distance = Vector3.Distance(targetTransform.position, transform.position);
 
         if (distance <= lookRadius)
         {
-            agent.SetDestination(target.position);
+            //follow target
+            agent.SetDestination(targetTransform.position);
             attacking = true;
 
             if (distance <= agent.stoppingDistance)
             {
-                //attack target
                 //face target
                 FaceTarget();
             }
@@ -46,23 +52,32 @@ public class NpcController : MonoBehaviour
         else attacking = false;
         if (timer >= wanderTimer && !attacking)
         {
+            //wander
             Vector3 newPosition = RandomNavSphere(transform.position, wanderRadius, -1);
             agent.SetDestination(newPosition);
+            timer = 0;
+        }
+        if (timer >= infectTimer && distance <= infectRadius )
+        {
+            //infect target
+            InfectTarget();
             timer = 0;
         }
     }
 
     private void FaceTarget ()
     {
-        Vector3 direction = (target.position - transform.position).normalized;
+        Vector3 direction = (targetTransform.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
-
+    //draw lookRadius and infectRadius
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, infectRadius);
     }
 
     public static Vector3 RandomNavSphere(Vector3 origin, float distance, int layermask)
@@ -76,5 +91,10 @@ public class NpcController : MonoBehaviour
         NavMesh.SamplePosition(randomDirection, out navHit, distance, layermask);
 
         return navHit.position;
+    }
+
+    public void InfectTarget()
+    {
+        targetHealth.DamagePlayer(targetHealth.infectionRate);
     }
 }

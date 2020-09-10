@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth = 100.0f;
     public float minHealth = 0.0f;
     public float currentHealth;
-    public float healthbarTestValue = 10.0f;
+    public float infectionRate = 1.0f;
 
     public Healthbar playerHealthbar;
     void Start()
@@ -17,15 +17,7 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && currentHealth < maxHealth)
-        {
-            TakeDamage(healthbarTestValue);
-        }
-    }
-
-    void TakeDamage(float damage)
+    public void DamagePlayer(float damage)
     {
         currentHealth += damage;
         playerHealthbar.SetHealth(currentHealth);
