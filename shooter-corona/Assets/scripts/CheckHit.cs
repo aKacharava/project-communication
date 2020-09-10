@@ -16,7 +16,7 @@ public class CheckHit : MonoBehaviour
             {
                 targetColorChange.material.color = colorGreen;
                 targetFind.gameObject.tag = "NPC_Masked";
-                Debug.Log(targetFind.gameObject.tag);
+                Debug.Log("NPC Color changed");
                 Destroy(this.gameObject);
             }
         }

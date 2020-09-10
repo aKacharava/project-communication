@@ -30,8 +30,8 @@ public class Healthbar : MonoBehaviour
     {
         if (slider.value == slider.maxValue)
         {
-            gameUI.SetActive(false);
             gameOverUI.SetActive(true);
+            gameUI.SetActive(false);
             Time.timeScale = 0f;
         }
     }
