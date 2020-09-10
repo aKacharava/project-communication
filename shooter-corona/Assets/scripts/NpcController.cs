@@ -13,6 +13,8 @@ public class NpcController : MonoBehaviour
     public float wanderRadius;
     public float wanderTimer;
     public float infectTimer;
+    public bool masked;
+    public Color currentColor;
 
     private float timer;
     private bool attacking;
@@ -29,6 +31,7 @@ public class NpcController : MonoBehaviour
         targetTransform = PlayerManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
         timer = wanderTimer;
+        masked = false;
         attacking = false;
     }
         
@@ -37,7 +40,7 @@ public class NpcController : MonoBehaviour
         timer += Time.deltaTime;
         float distance = Vector3.Distance(targetTransform.position, transform.position);
 
-        if (distance <= lookRadius)
+        if (distance <= lookRadius && !masked)
         {
             //follow target
             agent.SetDestination(targetTransform.position);
@@ -57,11 +60,19 @@ public class NpcController : MonoBehaviour
             agent.SetDestination(newPosition);
             timer = 0;
         }
-        if (timer >= infectTimer && distance <= infectRadius )
+        if (timer >= infectTimer && distance <= infectRadius && !masked)
         {
             //infect target
             InfectTarget();
             timer = 0;
+        }
+
+        currentColor = gameObject.GetComponentInChildren<Renderer>().material.color;
+
+        if (currentColor == new Color(0, 1, 0, 1))
+        {
+            //masked if material on children is green
+            masked = true;
         }
     }
 
