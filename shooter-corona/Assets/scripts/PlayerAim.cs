@@ -4,26 +4,11 @@ using UnityEngine;
 
 public class PlayerAim : MonoBehaviour
 {
-    private Camera mainCam;
-
     Vector3 lookPos;
-    void Start()
-    {
-        mainCam = Camera.main;
-    }
 
     // Update is called once per frame
     void Update()
     {
-        //Vector3 mousePos = Input.mousePosition;
-        //Vector3 playerPos = mainCam.WorldToScreenPoint(transform.localPosition);
-
-        //Vector2 offset = new Vector3(mousePos.x - playerPos.x, mousePos.y - playerPos.z);
-
-        //float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg - 90;
-
-        //transform.rotation = Quaternion.Euler(0f, -angle, 0f);
-
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hit;

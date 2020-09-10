@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class CheckHit : MonoBehaviour
 {
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name.Contains("NPC"))
         {
-            Debug.Log("NPC IS HIT");
-            Destroy(this.gameObject);
-        }
-        else if (collision.gameObject.name == "Gun")
-        {
+            var targetFind = collision.gameObject.transform.Find("GFX");
+            var targetColorChange = targetFind.GetComponent<Renderer>();
+            Color colorGreen = new Color(0, 1, 0, 1); // Green color
 
+            if (targetColorChange.material.color != colorGreen)
+            {
+                targetColorChange.material.color = colorGreen;
+                Debug.Log("NPC Color changed");
+                Destroy(this.gameObject);
+            }
         }
         else
         {
