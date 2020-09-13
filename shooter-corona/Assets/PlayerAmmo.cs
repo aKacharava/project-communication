@@ -7,10 +7,20 @@ public class PlayerAmmo : MonoBehaviour
 {
     public int ammo = 30;
     public Text ammoDisplay;
+    public int pickupAmmoCount;
 
     void Update()
     {
         ammoDisplay.text = "Ammo: " + ammo.ToString();
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Ammo")
+        {
+            ammo += pickupAmmoCount;
+            Destroy(other.gameObject);
+        }
     }
 
     public void SetAmmo(int ammoCount)
