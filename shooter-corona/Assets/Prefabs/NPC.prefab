@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7dd18d0e9827488438632a738391aa8c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -196,11 +196,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 15
-  infectRadius: 5
+  infectPlayerRadius: 3
+  infectNPCsRadius: 2.5
   wanderRadius: 10
   wanderTimer: 1
-  infectTimer: 0
+  infectPlayerTimer: 0
   masked: 0
+  infected: 0
   currentColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7817427692953408765
 GameObject:

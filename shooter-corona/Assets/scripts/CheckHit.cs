@@ -18,7 +18,12 @@ public class CheckHit : MonoBehaviour
                 targetFind.gameObject.tag = "NPC_Masked";
                 Debug.Log("NPC Color changed");
                 Destroy(this.gameObject);
+                if (!collision.gameObject.GetComponent<NpcController>().masked)
+                {
+                    collision.gameObject.GetComponent<NpcController>().masked = true;
+                }
             }
+            
         }
         else
         {
