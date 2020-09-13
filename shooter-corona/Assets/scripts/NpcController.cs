@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,21 +10,25 @@ public class NpcController : MonoBehaviour
     //Variables
 
     public float lookRadius = 10f;
-    public float infectRadius = 3f;
+    public float infectPlayerRadius = 3f;
+    public float infectNPCsRadius = 2.5f;
     public float wanderRadius;
     public float wanderTimer;
-    public float infectTimer;
+    public float infectPlayerTimer;
     public bool masked;
+    public bool infected;
     public Color currentColor;
 
     private float timer;
     private bool attacking;
+
+    private List<GameObject> NPCs = new List<GameObject>();
     private Transform targetTransform;
     private NavMeshAgent agent;
     private PlayerHealth targetHealth;
-     
 
-    //Methods
+    private static List<NpcController> instances = new List<NpcController> { };
+    //Method
 
     void Start()
     {
@@ -33,20 +38,49 @@ public class NpcController : MonoBehaviour
         timer = wanderTimer;
         masked = false;
         attacking = false;
+
+        NpcController.instances.Add(this);
     }
         
     void Update()
     {
         timer += Time.deltaTime;
-        float distance = Vector3.Distance(targetTransform.position, transform.position);
 
-        if (distance <= lookRadius && !masked)
+
+
+        if (infected)
+        {
+            if (!masked)
+            {
+                gameObject.GetComponentInChildren<Renderer>().material.color = Color.red;
+            }
+
+            foreach (var npc in NpcController.instances)
+            {
+                if (npc == null)
+                    continue;
+                float distanceToNpc = Vector3.Distance(transform.position, npc.transform.position);
+
+                if (distanceToNpc <= infectNPCsRadius && !npc.infected && !npc.masked && !masked)
+                {
+                    npc.infected = true;
+                    print("npc infected!");
+                }
+            }
+
+        }
+
+
+
+        float distanceToTarget = Vector3.Distance(targetTransform.position, transform.position);
+
+        if (distanceToTarget <= lookRadius && !masked && infected)
         {
             //follow target
             agent.SetDestination(targetTransform.position);
             attacking = true;
 
-            if (distance <= agent.stoppingDistance)
+            if (distanceToTarget <= agent.stoppingDistance)
             {
                 //face target
                 FaceTarget();
@@ -60,20 +94,20 @@ public class NpcController : MonoBehaviour
             agent.SetDestination(newPosition);
             timer = 0;
         }
-        if (timer >= infectTimer && distance <= infectRadius && !masked)
+        if (timer >= infectPlayerTimer && distanceToTarget <= infectPlayerRadius && !masked && infected)
         {
             //infect target
             InfectTarget();
             timer = 0;
         }
 
-        currentColor = gameObject.GetComponentInChildren<Renderer>().material.color;
+        //currentColor = gameObject.GetComponentInChildren<Renderer>().material.color;
 
-        if (currentColor == new Color(0, 1, 0, 1))
-        {
-            //masked if material on children is green
-            masked = true;
-        }
+        //if (currentColor == new Color(0, 1, 0, 1))
+        //{
+        //    //masked if material on children is green
+        //    masked = true;
+        //}
     }
 
     private void FaceTarget ()
@@ -88,7 +122,12 @@ public class NpcController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, infectRadius);
+        Gizmos.DrawWireSphere(transform.position, infectPlayerRadius);
+        Gizmos.color = Color.green;
+        if(infected)
+        {
+            Gizmos.DrawWireSphere(transform.position, infectNPCsRadius);
+        }
     }
 
     public static Vector3 RandomNavSphere(Vector3 origin, float distance, int layermask)
