@@ -2836,9 +2836,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 3923805876162715941}
-  distanceY: 31.41
-  distanceZ: -11.12
-  smooth: 0.15
+  distanceY: 38.1
+  distanceZ: -11.06
+  smooth: 0.24
 --- !u!1 &977390912 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2386093188738745335, guid: 5e2bb9e0241b2a54cab686cc1833c303, type: 3}
@@ -5996,7 +5996,7 @@ Transform:
   m_LocalScale: {x: 54.9754, y: 11.116023, z: 7.424498}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2118816261 stripped
 GameObject:
@@ -6144,6 +6144,14 @@ PrefabInstance:
     - target: {fileID: 4589583066419454292, guid: 1bff4443adb337544b5a4e87267ffb55, type: 3}
       propertyPath: infectionRate
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589583066419454292, guid: 1bff4443adb337544b5a4e87267ffb55, type: 3}
+      propertyPath: infectByHealthyRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589583066419454292, guid: 1bff4443adb337544b5a4e87267ffb55, type: 3}
+      propertyPath: infectBySickRate
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4589583066419454302, guid: 1bff4443adb337544b5a4e87267ffb55, type: 3}
       propertyPath: m_Name

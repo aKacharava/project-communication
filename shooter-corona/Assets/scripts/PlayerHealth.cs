@@ -7,7 +7,8 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth = 100.0f;
     public float minHealth = 0.0f;
     public float currentHealth;
-    public float infectionRate = 1.0f;
+    public float infectByHealthyRate = 0.2f;
+    public float infectBySickRate = 0.5f;
 
     public Healthbar playerHealthbar;
     void Start()
