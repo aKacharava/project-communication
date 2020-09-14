@@ -9,7 +9,7 @@ public class Shoot : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && GetComponentInParent<PlayerAmmo>().ammo >0)
+        if (Input.GetMouseButtonDown(0) && GetComponentInParent<PlayerAmmo>().ammo > 0)
         {
             GameObject _instObj = Instantiate(prefab, transform.position, Quaternion.identity) as GameObject;
             Rigidbody _instObjRigBod = _instObj.GetComponent<Rigidbody>();

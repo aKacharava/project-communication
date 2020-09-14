@@ -64,7 +64,6 @@ public class NpcController : MonoBehaviour
                 if (distanceToNpc <= infectNPCsRadius && !npc.infected && !npc.masked && !masked)
                 {
                     npc.infected = true;
-                    print("npc infected!");
                 }
             }
 
