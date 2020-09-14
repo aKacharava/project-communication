@@ -6,7 +6,7 @@ TagManager:
   tags:
   - NPC
   - NPC_Masked
-  - Ammo
+  - Bullet
   layers:
   - Default
   - TransparentFX
