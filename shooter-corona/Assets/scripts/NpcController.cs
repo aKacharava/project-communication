@@ -93,10 +93,18 @@ public class NpcController : MonoBehaviour
             agent.SetDestination(newPosition);
             timer = 0;
         }
+        //infect by healthy
+        if (timer >= infectPlayerTimer && distanceToTarget <= infectPlayerRadius && !masked && !infected)
+        {
+            //infect target
+            InfectTarget(targetHealth.infectByHealthyRate);
+            timer = 0;
+        }
+        //infect by sick
         if (timer >= infectPlayerTimer && distanceToTarget <= infectPlayerRadius && !masked && infected)
         {
             //infect target
-            InfectTarget();
+            InfectTarget(targetHealth.infectBySickRate);
             timer = 0;
         }
 
@@ -142,8 +150,8 @@ public class NpcController : MonoBehaviour
         return navHit.position;
     }
 
-    public void InfectTarget()
+    public void InfectTarget(float infectionRate)
     {
-        targetHealth.DamagePlayer(targetHealth.infectionRate);
+        targetHealth.DamagePlayer(infectionRate);
     }
 }
