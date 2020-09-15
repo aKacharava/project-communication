@@ -9,14 +9,18 @@ public class Shoot : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && GetComponentInParent<PlayerAmmo>().ammo > 0)
+        if (Input.GetMouseButtonDown(0) && GetComponentInParent<PlayerAmmo>().ammo > 0 && Time.timeScale != 0f)
         {
             SoundManager.PlaySound("gun sound", true, false);
-            
-            GameObject _instObj = Instantiate(prefab, transform.position, Quaternion.identity) as GameObject;
-            Rigidbody _instObjRigBod = _instObj.GetComponent<Rigidbody>();
-            _instObjRigBod.AddRelativeForce(this.transform.forward * speed);
-            GetComponentInParent<PlayerAmmo>().LoseAmmo(1);
+            ShootBullet();
         }
+    }
+
+    void ShootBullet()
+    {
+        GameObject _instObj = Instantiate(prefab, transform.position, Quaternion.identity) as GameObject;
+        Rigidbody _instObjRigBod = _instObj.GetComponent<Rigidbody>();
+        _instObjRigBod.AddRelativeForce(this.transform.forward * speed);
+        GetComponentInParent<PlayerAmmo>().LoseAmmo(1);
     }
 }
