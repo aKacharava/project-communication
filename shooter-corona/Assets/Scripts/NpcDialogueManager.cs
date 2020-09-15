@@ -1,44 +1,33 @@
 ﻿using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 
 public class NpcDialogueManager : MonoBehaviour
 {
-    public GameObject floatingTextPrefab;
-    GameObject checkDuplicateObj;
-
-    void Start()
-    {
-        checkDuplicateObj = GameObject.Find("FloatingText");
-    }
-
-    void Update()
-    {
-        CheckForDuplicates();
-    }
+    public TextMeshProUGUI floatingTextPrefab;
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
             ShowFloatingText();
+            SetFloatingText();
         }
     }
 
-    void CheckForDuplicates()
+    void SetFloatingText()
     {
-        // Check if floating text exists in game
-        if (checkDuplicateObj != null)
-        {
-            Debug.Log("IT EXISTS");
-            //Destroy(floatingTextPrefab);
-        }
+        floatingTextPrefab.text = "blablabllalabl";
     }
 
     void ShowFloatingText()
     {
-        Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, transform);
+        if (floatingTextPrefab.gameObject.activeInHierarchy == false)
+        {
+            floatingTextPrefab.gameObject.SetActive(true);
+        }
     }
 }
