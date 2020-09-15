@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d823c488de5882d4b838bd5dc017030b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 12
+  moveSpeed: 8
   rigBody: {fileID: 4589583066419454288}
 --- !u!114 &4589583066419454291
 MonoBehaviour:
@@ -412,7 +412,8 @@ MonoBehaviour:
   maxHealth: 100
   minHealth: 0
   currentHealth: 0
-  infectionRate: 1
+  infectByHealthyRate: 0.2
+  infectBySickRate: 0.5
   playerHealthbar: {fileID: 0}
 --- !u!114 &4614435316087779183
 MonoBehaviour:
@@ -428,3 +429,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammo: 30
   ammoDisplay: {fileID: 0}
+  pickupAmmoCount: 0
