@@ -12,11 +12,14 @@ public class CheckHit : MonoBehaviour
             var targetColorChange = targetFind.GetComponent<Renderer>();
             Color colorGreen = new Color(0, 1, 0, 1); // Green color
 
+            SoundManager.PlaySound("hited by mask", true, false);
+
             if (targetColorChange.material.color != colorGreen)
             {
                 targetColorChange.material.color = colorGreen;
                 targetFind.gameObject.tag = "NPC_Masked";
                 Destroy(this.gameObject);
+
                 if (!collision.gameObject.GetComponent<NpcController>().masked)
                 {
                     collision.gameObject.GetComponent<NpcController>().masked = true;
