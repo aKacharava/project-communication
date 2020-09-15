@@ -45,9 +45,7 @@ public class NpcController : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-
-
-
+        
         if (infected)
         {
             if (!masked)
@@ -152,6 +150,22 @@ public class NpcController : MonoBehaviour
 
     public void InfectTarget(float infectionRate)
     {
-        targetHealth.DamagePlayer(infectionRate);
+        if(Time.timeScale > 0f)
+        {
+            System.Random random = new System.Random();
+
+            int sound = random.Next(1, 3);
+
+            switch (sound)
+            {
+                case 1: SoundManager.PlaySound("infected cough", false, false); break;
+                case 2: SoundManager.PlaySound("infected cough 2", false, false); break;
+                default: SoundManager.PlaySound("infected cough", false, false); break;
+            }
+
+            SoundManager.PlaySound("heartbeat", true, false);
+
+            targetHealth.DamagePlayer(infectionRate);
+        }
     }
 }

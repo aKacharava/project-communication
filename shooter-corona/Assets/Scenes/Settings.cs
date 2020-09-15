@@ -13,6 +13,21 @@ public class Settings : MonoBehaviour
     public Slider soundsSlider;
 
     private CanvasGroup brightness;
+    
+    public Transform Sound(string name, bool isMusic)
+    {
+        Transform container = isMusic ? musicContainer : soundsContainer;
+
+        foreach(Transform sound in container.GetComponentInChildren<Transform>())
+        {
+            if(sound.name == name)
+            {
+                return sound;
+            }
+        }
+
+        return null;
+    }
 
     private void Start()
     {

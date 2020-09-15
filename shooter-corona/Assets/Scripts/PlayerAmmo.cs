@@ -19,6 +19,9 @@ public class PlayerAmmo : MonoBehaviour
         if(other.gameObject.tag == "Ammo")
         {
             ammo += pickupAmmoCount;
+
+            SoundManager.PlaySound("reloading", true, false);
+
             Destroy(other.gameObject);
         }
     }

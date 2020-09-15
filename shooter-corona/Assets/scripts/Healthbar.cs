@@ -30,6 +30,8 @@ public class Healthbar : MonoBehaviour
     {
         if (slider.value == slider.maxValue)
         {
+            SoundManager.StopSound("trainstation sound", true);
+            SoundManager.PlaySound("losing screen", true, false);
             gameOverUI.SetActive(true);
             gameUI.SetActive(false);
             Time.timeScale = 0f;

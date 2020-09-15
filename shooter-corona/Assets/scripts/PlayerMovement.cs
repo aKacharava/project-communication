@@ -15,11 +15,25 @@ public class PlayerMovement : MonoBehaviour
         /// Input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.z = Input.GetAxisRaw("Vertical");
+        
+        if(Input.GetKey(KeyCode.W) || 
+           Input.GetKey(KeyCode.A) || 
+           Input.GetKey(KeyCode.S) || 
+           Input.GetKey(KeyCode.D))
+        {
+            SoundManager.PlaySound("walking sound", false, false);
+        }
+
+        else
+        {
+            SoundManager.StopSound("walking sound", false);
+        }
     }
 
     void FixedUpdate()
     {
         /// Movement 
         rigBody.MovePosition(rigBody.position + movement.normalized * moveSpeed * Time.deltaTime);
+
     }
 }
