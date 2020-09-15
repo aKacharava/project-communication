@@ -8,8 +8,8 @@ public class CheckHit : MonoBehaviour
     {
         if (collision.gameObject.name.Contains("NPC"))
         {
-            var targetFind = collision.gameObject.transform.Find("GFX");
-            var targetColorChange = targetFind.GetComponent<Renderer>();
+            var targetFind = collision.gameObject.transform.Find("NPC_GFX");
+            var targetColorChange = targetFind.GetChild(0).GetComponent<Renderer>();
             Color colorGreen = new Color(0, 1, 0, 1); // Green color
 
             if (targetColorChange.material.color != colorGreen)
@@ -22,11 +22,10 @@ public class CheckHit : MonoBehaviour
                     collision.gameObject.GetComponent<NpcController>().masked = true;
                 }
             }
-            
         }
         else
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject, 2f);
         }
     }
 }
