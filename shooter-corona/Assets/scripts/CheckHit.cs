@@ -25,7 +25,7 @@ public class CheckHit : MonoBehaviour
         }
         else
         {
-            Destroy(this.gameObject, 2f);
+            Destroy(this.gameObject, 0.3f);
         }
     }
 }
