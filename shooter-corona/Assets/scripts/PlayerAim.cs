@@ -9,6 +9,14 @@ public class PlayerAim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale != 0f)
+        {
+            Aim();
+        }
+    }
+
+    void Aim()
+    {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hit;
