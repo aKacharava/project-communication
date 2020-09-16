@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9d90d39e78304e64ab218616a5290606
+guid: e0ab740c3c6484240a6b05c7062798a5
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -21,14 +21,14 @@ ScriptedImporter:
     materialProperties:
       shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
       shaderKeywords: _MAINTEX _METALLICGLOSSMAP _NORMALMAP _OCCLUSIONMAP _PARALLAXMAP
-        _ROUGHNESSMAP
       lightmapFlags: 4
       enableInstancingVariants: 0
       doubleSidedGI: 0
       customRenderQueue: -1
       texEnvs:
       - name: _BumpMap
-        texture: {fileID: -1157128575410995172, guid: 9d90d39e78304e64ab218616a5290606, type: 3}
+        texture: {fileID: -1157128575410995172, guid: e0ab740c3c6484240a6b05c7062798a5,
+          type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _DetailAlbedoMap
@@ -45,22 +45,26 @@ ScriptedImporter:
         offset: {x: 0, y: 0}
       - name: _EmissionMap
         texture: {instanceID: 0}
-        scale: {x: 80, y: 20}
+        scale: {x: 70, y: 17}
         offset: {x: 0, y: 0}
       - name: _MainTex
-        texture: {fileID: 2201112578443607904, guid: 9d90d39e78304e64ab218616a5290606, type: 3}
-        scale: {x: 80, y: 20}
+        texture: {fileID: 2201112578443607904, guid: e0ab740c3c6484240a6b05c7062798a5,
+          type: 3}
+        scale: {x: 70, y: 17}
         offset: {x: 0, y: 0}
       - name: _MetallicGlossMap
-        texture: {fileID: 2107162172711392008, guid: 9d90d39e78304e64ab218616a5290606, type: 3}
+        texture: {fileID: 2107162172711392008, guid: e0ab740c3c6484240a6b05c7062798a5,
+          type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _OcclusionMap
-        texture: {fileID: -7046962806654306103, guid: 9d90d39e78304e64ab218616a5290606, type: 3}
+        texture: {fileID: -7046962806654306103, guid: e0ab740c3c6484240a6b05c7062798a5,
+          type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _ParallaxMap
-        texture: {fileID: 8134272002550132312, guid: 9d90d39e78304e64ab218616a5290606, type: 3}
+        texture: {fileID: 8134272002550132312, guid: e0ab740c3c6484240a6b05c7062798a5,
+          type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       floats:
@@ -223,10 +227,11 @@ ScriptedImporter:
       textureFormatMode: 0
       normalCompressed: 0
       bGenerateOnLoad: 1
-    material: {fileID: 8955146812381107103, guid: 9d90d39e78304e64ab218616a5290606, type: 3}
+    material: {fileID: 8955146812381107103, guid: e0ab740c3c6484240a6b05c7062798a5,
+      type: 3}
     generatedTextures:
-    - {fileID: 2201112578443607904, guid: 9d90d39e78304e64ab218616a5290606, type: 3}
-    - {fileID: -1157128575410995172, guid: 9d90d39e78304e64ab218616a5290606, type: 3}
-    - {fileID: 2107162172711392008, guid: 9d90d39e78304e64ab218616a5290606, type: 3}
-    - {fileID: 8134272002550132312, guid: 9d90d39e78304e64ab218616a5290606, type: 3}
-    - {fileID: -7046962806654306103, guid: 9d90d39e78304e64ab218616a5290606, type: 3}
+    - {fileID: 2201112578443607904, guid: e0ab740c3c6484240a6b05c7062798a5, type: 3}
+    - {fileID: -1157128575410995172, guid: e0ab740c3c6484240a6b05c7062798a5, type: 3}
+    - {fileID: 2107162172711392008, guid: e0ab740c3c6484240a6b05c7062798a5, type: 3}
+    - {fileID: 8134272002550132312, guid: e0ab740c3c6484240a6b05c7062798a5, type: 3}
+    - {fileID: -7046962806654306103, guid: e0ab740c3c6484240a6b05c7062798a5, type: 3}
