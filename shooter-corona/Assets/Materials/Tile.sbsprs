@@ -1,0 +1,5 @@
+<sbspresets count="1" formatversion="1.1">
+  <sbspreset pkgurl="pkg://Tile" label="" >
+  <presetinput identifier="$outputsize" uid="1703792376" type="8" value="9,9" />
+ </sbspreset>
+</sbspresets>
