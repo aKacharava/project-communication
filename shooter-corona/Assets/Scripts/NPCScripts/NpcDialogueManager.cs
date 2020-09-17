@@ -19,11 +19,7 @@ public class NpcDialogueManager : MonoBehaviour
         "Oh no, I have a mask!",
         "Arrrghhh, I was already tested.",
         "Protection on, lights off now baby!",
-        "yeah Daddy!"
-    };
-
-    string[] dialogueWithMask = new string[]
-    {
+        "yeah Daddy!",
         "The bigger the mask the better it gets!",
         "This face can’t handle two masks at once baby.",
         "You can’t mask me doc!",
@@ -35,31 +31,15 @@ public class NpcDialogueManager : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            if (this.gameObject.GetComponent<NpcController>().masked == true)
-            {
-                Debug.Log("NO MASK");
-                SetFloatingTextWithMask();
-            }
-            else
-            {
-                Debug.Log("NO MASK");
-                SetFloatingTextNoMask();
-            }
-
+            SetFloatingText();
             ShowFloatingText();
         }
     }
 
-    void SetFloatingTextNoMask()
+    void SetFloatingText()
     {
-        rndTextIndex = Random.Range(0, 5);
+        rndTextIndex = Random.Range(0, 10);
         floatingTextPrefab.GetComponentInChildren<Text>().text = dialogueNoMask[rndTextIndex];
-    }
-
-    void SetFloatingTextWithMask()
-    {
-        rndTextIndex = Random.Range(0, 4);
-        floatingTextPrefab.GetComponentInChildren<Text>().text = dialogueWithMask[rndTextIndex];
     }
 
     void ShowFloatingText()
