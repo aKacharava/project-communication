@@ -7,6 +7,8 @@ TagManager:
   - NPC
   - NPC_Masked
   - Bullet
+  - Ammo
+  - Sink
   layers:
   - Default
   - TransparentFX
