@@ -23,4 +23,10 @@ public class PlayerHealth : MonoBehaviour
         currentHealth += damage;
         playerHealthbar.SetHealth(currentHealth);
     }
+    public void HealPlayer(float damage)
+    {
+        currentHealth -= damage;
+        playerHealthbar.SetHealth(currentHealth);
+    }
+
 }
