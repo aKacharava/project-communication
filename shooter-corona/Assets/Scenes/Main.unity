@@ -2128,6 +2128,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1076581207059195690, guid: 991b40f00a290044ca7f27557bb692bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2037249591000896003, guid: 991b40f00a290044ca7f27557bb692bf,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -2286,7 +2291,7 @@ PrefabInstance:
     - target: {fileID: 4777801841771067842, guid: 991b40f00a290044ca7f27557bb692bf,
         type: 3}
       propertyPath: m_UiScaleMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4777801841771067842, guid: 991b40f00a290044ca7f27557bb692bf,
         type: 3}
@@ -2513,11 +2518,36 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5390068513275323164, guid: 991b40f00a290044ca7f27557bb692bf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -712
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390068513275323164, guid: 991b40f00a290044ca7f27557bb692bf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -425
+      objectReference: {fileID: 0}
     - target: {fileID: 5799449487553680413, guid: 991b40f00a290044ca7f27557bb692bf,
         type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 5799449487553680413, guid: 991b40f00a290044ca7f27557bb692bf,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361488703636355862, guid: 991b40f00a290044ca7f27557bb692bf,
+        type: 3}
+      propertyPath: gameUI
+      value: 
+      objectReference: {fileID: 1099614894}
+    - target: {fileID: 8361488703636355862, guid: 991b40f00a290044ca7f27557bb692bf,
+        type: 3}
+      propertyPath: victoryUI
+      value: 
+      objectReference: {fileID: 1278127230}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 991b40f00a290044ca7f27557bb692bf, type: 3}
 --- !u!4 &473692254 stripped
@@ -5025,12 +5055,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 467937020}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &1099614895 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4777801841771067840, guid: 991b40f00a290044ca7f27557bb692bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 467937020}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1134097711
 GameObject:
   m_ObjectHideFlags: 0
@@ -5609,7 +5633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.89411765}
+  m_Color: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 0.89411765}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5762,85 +5786,18 @@ Transform:
   m_Father: {fileID: 1759483539}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &1233019371
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1233019372}
-  - component: {fileID: 1233019374}
-  - component: {fileID: 1233019373}
-  m_Layer: 5
-  m_Name: AmmoDisplay
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1233019372
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233019371}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1099614895}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 520, y: 17.370972}
-  m_SizeDelta: {x: 260.12274, y: 47.26059}
-  m_Pivot: {x: 1, y: 0}
---- !u!114 &1233019373
+--- !u!114 &1233019373 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2347853012159054325, guid: 991b40f00a290044ca7f27557bb692bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 467937020}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233019371}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: cf8308ea93efb534daeb084502efedb6, type: 3}
-    m_FontSize: 40
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: Ammo
---- !u!222 &1233019374
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233019371}
-  m_CullTransparentMesh: 0
 --- !u!1 &1236438021
 GameObject:
   m_ObjectHideFlags: 0
@@ -8192,8 +8149,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 24}
-  m_SizeDelta: {x: 272.4657, y: 89.192505}
+  m_AnchoredPosition: {x: -10, y: 24}
+  m_SizeDelta: {x: 583.08124, y: 89.192505}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1584370043
 MonoBehaviour:
@@ -8208,7 +8165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.2783019, b: 0.2783019, a: 1}
+  m_Color: {r: 0.27843142, g: 1, b: 0.34834984, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8228,8 +8185,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Congratulations! \nYou delayed corona from spreading and saved time for
-    the doctors to fin a cure!\nGood job for educating people too!"
+  m_Text: "Congratulations! \nYou saved the people!"
 --- !u!222 &1584370044
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8254,9 +8210,10 @@ PrefabInstance:
         around the station (Using the W-A-S-D - Keys). Aim your mask gun(With your
         mouse & shoot with left mouse button) at people that aren't using masks(the
         normal and red ones) to stop the spread and prevent them from getting infected(They
-        will turn green). \r\nThe more time passes, the more risk of people getting
-        infected and the harder your job will be! \r\n\r\n- Close the window to start
-        the game by pressing the red button -"
+        will turn green). \rPeople can infect you, so to wash your hands, approach
+        a sink and hold \"E\" to reduce your infection.\nThe more time passes, the
+        more risk of people getting infected and the harder your job will be! \r\n\r\n-
+        Close the window to start the game by pressing the red arrow -"
       objectReference: {fileID: 0}
     - target: {fileID: 743356942609650435, guid: a6577851674d5484aa18d7f098ef65d0,
         type: 3}
@@ -8408,7 +8365,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Texture
       value: 
-      objectReference: {fileID: 2800000, guid: 627afbe6df461004fb63846894cd1ab9, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4380778020433301777, guid: a6577851674d5484aa18d7f098ef65d0,
         type: 3}
       propertyPath: m_LocalPosition.x
