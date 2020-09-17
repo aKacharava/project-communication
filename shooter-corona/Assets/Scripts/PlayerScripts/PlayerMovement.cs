@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rigBody;
 
     Vector3 movement;
+    CharacterAnimator charAnimator;
 
     void Update()
     {
@@ -34,6 +35,5 @@ public class PlayerMovement : MonoBehaviour
     {
         /// Movement 
         rigBody.MovePosition(rigBody.position + movement.normalized * moveSpeed * Time.deltaTime);
-
     }
 }

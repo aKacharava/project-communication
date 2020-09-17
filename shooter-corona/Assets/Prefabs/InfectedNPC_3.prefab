@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5075620830041351119
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -1258510637266551101, guid: e7f663d8ce91e8241b1a91deb345b753,
+        type: 3}
+      propertyPath: infectNPCsRadius
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -1258510637266551101, guid: e7f663d8ce91e8241b1a91deb345b753,
+        type: 3}
+      propertyPath: infected
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 893137735717199407, guid: e7f663d8ce91e8241b1a91deb345b753,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893137735717199407, guid: e7f663d8ce91e8241b1a91deb345b753,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893137735717199407, guid: e7f663d8ce91e8241b1a91deb345b753,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893137735717199407, guid: e7f663d8ce91e8241b1a91deb345b753,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893137735717199407, guid: e7f663d8ce91e8241b1a91deb345b753,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893137735717199407, guid: e7f663d8ce91e8241b1a91deb345b753,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893137735717199407, guid: e7f663d8ce91e8241b1a91deb345b753,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 893137735717199407, guid: e7f663d8ce91e8241b1a91deb345b753,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893137735717199407, guid: e7f663d8ce91e8241b1a91deb345b753,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893137735717199407, guid: e7f663d8ce91e8241b1a91deb345b753,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893137735717199407, guid: e7f663d8ce91e8241b1a91deb345b753,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5256906371565989583, guid: e7f663d8ce91e8241b1a91deb345b753,
+        type: 3}
+      propertyPath: m_Name
+      value: InfectedNPC_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5423647740590791902, guid: e7f663d8ce91e8241b1a91deb345b753,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC_GFX
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e7f663d8ce91e8241b1a91deb345b753, type: 3}
