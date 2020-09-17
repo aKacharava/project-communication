@@ -37,10 +37,12 @@ public class NpcDialogueManager : MonoBehaviour
         {
             if (this.gameObject.GetComponent<NpcController>().masked == true)
             {
+                Debug.Log("NO MASK");
                 SetFloatingTextWithMask();
             }
             else
             {
+                Debug.Log("NO MASK");
                 SetFloatingTextNoMask();
             }
 
