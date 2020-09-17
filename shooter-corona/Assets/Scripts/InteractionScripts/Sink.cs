@@ -20,7 +20,7 @@ public class Sink : MonoBehaviour
     void Update()
     {
         float distToPlayer = Vector3.Distance(player.transform.position, transform.position);
-        print(distToPlayer);
+        //print(distToPlayer);
         if (distToPlayer<=interactionRadius)
         {
             floatingText.SetActive(true);
