@@ -32,6 +32,7 @@ GameObject:
   - component: {fileID: 7817427691499189178}
   - component: {fileID: 7817427691499189179}
   - component: {fileID: 7817427691499189191}
+  - component: {fileID: 2475874723259621085}
   m_Layer: 0
   m_Name: NPC_1
   m_TagString: NPC
@@ -128,6 +129,19 @@ MonoBehaviour:
   masked: 0
   infected: 0
   currentColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2475874723259621085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7817427691499189180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0465c9fddede44a47ad24c347b542089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatingTextPrefab: {fileID: 5697465055840585545}
 --- !u!1001 &4797343244811254942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -202,6 +216,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06ab2ae2d80bdd54090c56f56d89d358, type: 3}
+--- !u!1 &5697465055840585545 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 973586810016660439, guid: 06ab2ae2d80bdd54090c56f56d89d358,
+    type: 3}
+  m_PrefabInstance: {fileID: 4797343244811254942}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4385778635780848623 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9101489168066725745, guid: 06ab2ae2d80bdd54090c56f56d89d358,
