@@ -8,10 +8,12 @@ public class Score : MonoBehaviour
     public Text textScore;
 
     int npcs;
+    int maskedNpcs;
 
     void Update()
     {
         npcs = GameObject.FindGameObjectsWithTag("NPC").Length;
-        textScore.text = "Amount NPCs: " + npcs.ToString();
+        maskedNpcs = GameObject.FindGameObjectsWithTag("NPC_Masked").Length;
+        textScore.text = "Amount NPCs: " + maskedNpcs.ToString() + "/" + npcs.ToString();
     }
 }

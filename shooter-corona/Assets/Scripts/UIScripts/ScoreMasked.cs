@@ -25,6 +25,8 @@ public class ScoreMasked : MonoBehaviour
 
         if (npcs == _allNpcs)
         {
+            SoundManager.StopSound("trainstation sound", true);
+            SoundManager.PlaySound("victory sound", true, false);
             victoryUI.SetActive(true);
             gameUI.SetActive(false);
             Time.timeScale = 0f;
