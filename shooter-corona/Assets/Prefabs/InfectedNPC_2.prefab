@@ -22,6 +22,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC_GFX
       objectReference: {fileID: 0}
+    - target: {fileID: 5135013805281765048, guid: c687e98a8d662054eb9ef323c8ce94e3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6002534451429619072, guid: c687e98a8d662054eb9ef323c8ce94e3,
         type: 3}
       propertyPath: m_LocalPosition.x
