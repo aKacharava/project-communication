@@ -27,6 +27,7 @@ public class Sink : MonoBehaviour
             if(Input.GetKey(KeyCode.E) && targetHealth.currentHealth > 0)
             {
                 targetHealth.HealPlayer(healRate);
+                SoundManager.PlaySound("after washing hands", false, false);
             }
         }
         else floatingText.SetActive(false);
