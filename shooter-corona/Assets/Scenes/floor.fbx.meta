@@ -1,27 +1,24 @@
 fileFormatVersion: 2
-guid: 383335293ff89c2408a87d9494ac7ba8
+guid: ba2827aeb5eec684ea717754babc5505
 ModelImporter:
   serializedVersion: 20101
-  internalIDToNameTable:
-  - first:
-      74: 1827226128182048838
-    second: Take 001
+  internalIDToNameTable: []
   externalObjects:
   - first:
       type: UnityEngine:Cubemap
       assembly: UnityEngine.CoreModule
       name: diffuse_cube
-    second: {fileID: 8900000, guid: 1c6f31b0f7f99f54b949d22144c5d705, type: 3}
+    second: {fileID: 8900000, guid: 1d0d9225cc26fa144a59781d7d769030, type: 3}
   - first:
       type: UnityEngine:Cubemap
       assembly: UnityEngine.CoreModule
       name: specular_cube
-    second: {fileID: 8900000, guid: 6fb4eed457beee64ea694f0c10787937, type: 3}
+    second: {fileID: 8900000, guid: 108025dc5aacc8042b97b8bb727541b1, type: 3}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: UnderGroundStationMoodboard
-    second: {fileID: 2800000, guid: c463cf0a7cad13c4a891a810f1ab2292, type: 3}
+      name: MainFloor_MAT
+    second: {fileID: 2100000, guid: b3f8db0441c7ef8419b503238f77947b, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
